@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>MYPage</title>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    Enter Range:
+    <input type = "number" id="num1" placeholder="Enter start index">
+    <input type = "number" id="num2" placeholder="Enter end index">
+<input type="button" onclick=check() value="Print Range">
+<script>
+    function check(){
+        
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        for(var i = x; i <= y; i++){
+            var c = 1;
+            for(var j = 2; j <=i; j++){
+                if(i%j==0)
+                    c++;
+            }
+            if(x==1 || c==2)
+                document.write(i+" ");
+        }
+    }
+</script>
+</body>
+</html>
