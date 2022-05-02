@@ -1,0 +1,39 @@
+<html lang="en-us">
+<head>
+<title>MYPage</title>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function verify(){
+            var num1 = Number(document.getElementById("num1").value);
+            switch(num1){
+                case 1: document.getElementById("para").innerHTML = "Sunday";
+                    break;
+                case 2: document.getElementById("para").innerHTML = "Monday";
+                    break;
+                case 3: document.getElementById("para").innerHTML = "Tuesday";
+                    break;
+                case 4: document.getElementById("para").innerHTML = "Wednesday";
+                    break;
+                case 5: document.getElementById("para").innerHTML = "Thursday";
+                    break;
+                case 6: document.getElementById("para").innerHTML = "Friday";
+                    break;
+                case 7: document.getElementById("para").innerHTML = "Saturday";
+                    break;
+                default: document.getElementById("para").innerHTML = "Invalid";
+            }
+           
+        }
+    </script>
+</head>
+
+<body>
+<form>
+ Enter first number:<input type="number" id="num1"  placeholder="num1">
+ 
+ <input type="button" value="verify" onclick="verify()">
+</form>
+<p id="para"></p>
+</body>
+</html>
