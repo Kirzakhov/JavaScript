@@ -1,0 +1,33 @@
+<html lang="en-us">
+<head>
+<title>MYPage</title>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function verify(){
+            var num1 = Number(document.getElementById("num1").value);
+            var len = num1.toString().length;
+            var rem, res = 0;
+            var temp = num1;
+            while(temp>0){
+                rem = temp%10;
+                res += Math.pow(rem,len);
+                temp = parseInt(temp/10);
+            }
+            if(num1==res)
+           document.getElementById("para").innerHTML = num1+" is armstrong";
+           else
+           document.getElementById("para").innerHTML = num1+" is not armstrong";
+        }
+    </script>
+</head>
+
+<body>
+<form>
+ Enter first number:<input type="number" id="num1"  placeholder="num1">
+ 
+ <input type="button" value="verify" onclick="verify()">
+</form>
+<p id="para"></p>
+</body>
+</html>
